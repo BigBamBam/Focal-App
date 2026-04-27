@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a0505"/>
+      <stop offset="100%" stop-color="#050102"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feGaussianBlur stdDeviation="28" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32,0 L0,0 L0,32" fill="none" stroke="rgba(200,30,30,0.06)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="glow_bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#cc1010" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#cc1010" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="round">
+      <rect x="0" y="0" width="512" height="512" rx="114" ry="114"/>
+    </clipPath>
+    <linearGradient id="linegrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(220,30,30,0)"/>
+      <stop offset="30%" stop-color="rgba(220,30,30,0.6)"/>
+      <stop offset="50%" stop-color="rgba(220,30,30,0.9)"/>
+      <stop offset="70%" stop-color="rgba(220,30,30,0.6)"/>
+      <stop offset="100%" stop-color="rgba(220,30,30,0)"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="114" ry="114" fill="url(#bg)"/>
+  <rect x="0" y="0" width="512" height="512" rx="114" ry="114" fill="url(#grid)"/>
+  <rect x="0" y="0" width="512" height="512" rx="114" ry="114" fill="url(#glow_bg)"/>
+  <rect x="4" y="4" width="504" height="504" rx="112" ry="112" fill="none" stroke="rgba(200,30,30,0.25)" stroke-width="2"/>
+  <text x="56" y="318" font-family="Georgia, serif" font-size="220" font-weight="700" font-style="normal" fill="#ffffff" opacity="0.95" letter-spacing="-8">Fo</text>
+  <text x="56" y="318" font-family="Georgia, serif" font-size="220" font-weight="700" font-style="italic" fill="#e03030" filter="url(#glow)" letter-spacing="-6" dx="228">cal</text>
+  <text x="256" y="375" font-family="Courier New, monospace" font-size="24" font-weight="700" fill="rgba(200,50,50,0.55)" text-anchor="middle" letter-spacing="5">YOUR DAY. MASTERED.</text>
+  <rect x="80" y="400" width="352" height="3" rx="1.5" fill="url(#linegrad)"/>
+  <circle cx="48" cy="48" r="4" fill="rgba(200,30,30,0.3)"/>
+  <circle cx="464" cy="48" r="4" fill="rgba(200,30,30,0.3)"/>
+  <circle cx="48" cy="464" r="4" fill="rgba(200,30,30,0.3)"/>
+  <circle cx="464" cy="464" r="4" fill="rgba(200,30,30,0.3)"/>
+</svg>
